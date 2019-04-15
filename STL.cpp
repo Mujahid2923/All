@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+///Integer to binary representaion
+// string s = std::bitset<64>(n).to_string();
+
 ///Vector
 
 /*int main()

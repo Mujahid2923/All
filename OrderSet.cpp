@@ -1,3 +1,4 @@
+                                           ///Single value in order set
 ///...................................*****.................................................///
 ///                  Mujahidul Islam ( mujahidulislam2923@gmail.com )                       ///
 ///                  Department of Ict                                                      ///
@@ -84,3 +85,128 @@ Output:
 13
 2
 */
+
+
+                                            ///Multiple value in order set
+/**OOO**/
+#include<bits/stdc++.h>
+typedef long long int ll;
+typedef unsigned long long ull;
+using namespace std;
+
+
+#define mems(arr,VAL)           memset(arr,VAL,sizeof(arr))
+#define pii                     pair<int,int>
+#define mk                      make_pair
+#define pb                      push_back
+#define ff                      first
+#define ss                      second
+#define PI                      acos(-1.0)
+
+#define pf                      printf
+#define sc                      scanf
+//#define Mod                     1000000007
+#define hiii                    1e9//1000000000
+#define looo                   -1e9//-1000000000
+
+
+
+// Ordered set
+#include <ext/pb_ds/assoc_container.hpp>
+using namespace __gnu_pbds;
+template<typename T> using orderset =
+tree<T,null_type,less<T>,rb_tree_tag,tree_order_statistics_node_update>;
+
+
+//orderset<int> s ; //orderset<int>::iterator it ;
+//orderset<int> X; //X.insert(1); //X.insert(2); //X.insert(4); //X.insert(8); //X.insert(16);
+//cout<<*X.find_by_order(1)<<endl; // 2 //cout<<*X.find_by_order(2)<<endl; // 4
+//cout<<*X.find_by_order(4)<<endl; // 16 //cout<<(end(X)==X.find_by_order(6))<<endl; // true
+//cout<<X.order_of_key(-5)<<endl; // 0 //cout<<X.order_of_key(1)<<endl; // 0
+//cout<<X.order_of_key(3)<<endl; // 2 //cout<<X.order_of_key(4)<<endl; // 2
+//cout<<X.order_of_key(400)<<endl; // 5
+
+
+
+
+int n,q,p,v,m,type,x;
+
+struct info
+{
+        int val,id;
+        info(int a,int b)
+        {
+                val = a;
+                id = b;
+        }
+
+        bool operator<(const info& p)const
+        {
+
+                if(val==p.val)
+                {
+                        return id<p.id;
+                }
+                else
+                {
+                        return val<p.val;
+                }
+        }
+};
+
+int a[200005], b[200005];
+
+orderset<info>os;
+
+
+map<int,int>mmap;
+
+void input()
+{
+        cin>>n;
+        for(int i=1;i<=n;i++)cin>>a[i];
+        for(int i=1;i<=n;i++)
+        {
+
+                cin>>b[i];
+                mmap[b[i]]++;
+                os.insert(info(b[i],mmap[b[i]]));
+        }
+}
+
+int element,Id;
+vector<ll>vec;
+
+void solve()
+{
+        for(int i=1;i<=n;i++)
+        {
+
+                int t = n - a[i];
+                int pos = os.order_of_key(info(t,mmap[t]));
+
+                if(pos == os.size())pos = 0;
+
+                element = (*os.find_by_order(pos)).val;
+                vec.pb((element + a[i])%n );
+
+                Id = (*os.find_by_order(pos)).id;
+                os.erase(info(element,Id));
+                mmap[element]--;
+        }
+}
+
+
+int main()
+{
+
+        input();
+        solve();
+        for(int i=0;i<vec.size();i++)
+                cout<<vec[i]<<' ';
+        cout<<endl;
+
+
+//cout << double( clock() - startTime ) / (double)CLOCKS_PER_SEC<< " seconds." << endl;
+return 0;
+}

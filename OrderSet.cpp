@@ -141,16 +141,16 @@ struct info
                 id = b;
         }
 
-        bool operator<(const info& p)const
+        bool operator<(const info& present)const
         {
 
-                if(val==p.val)
+                if(val==present.val)
                 {
-                        return id<p.id;
+                        return id<present.id;
                 }
                 else
                 {
-                        return val<p.val;
+                        return val<present.val;
                 }
         }
 };

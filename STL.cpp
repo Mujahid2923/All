@@ -2,11 +2,11 @@
 using namespace std;
 
 ///Integer to binary representaion
-// string s = std::bitset<64>(n).to_string();
+string s = std::bitset<64>(n).to_string();
 
 ///Vector
 
-/*int main()
+int main()
 {
     vector<int>v;
     v.push_back(1);
@@ -41,9 +41,9 @@ using namespace std;
     cout<<endl;
 
 }
-*/
+
 ///Set and Multiset
-/*
+
 int main()
 {
     cout<<"set:"<<endl;
@@ -77,11 +77,9 @@ int main()
     mst.erase(5);
     cout<<mst.count(5)<<endl;
 }
-*/
 
 
 ///Map
-/*
 
 
 int main()
@@ -97,10 +95,10 @@ int main()
         cout<<x.first<<" "<<x.second<<endl;
     }
 }
-*/
+
 
 ///Deque
-/*
+
 int main()
 {
     deque<int>d;
@@ -136,10 +134,9 @@ int main()
     }
 
 }
-*/
 
 ///Stack and Queue
-/*
+
 int main()
 {
     cout<<"Stack:"<<endl;
@@ -161,10 +158,10 @@ int main()
     q.pop();
     cout<<q.front()<<endl;
 }
-*/
+
 
 ///Priority_queue
-/*
+
 int main()
 {
     priority_queue<int>pq;
@@ -180,12 +177,12 @@ int main()
     }
     return 0;
 }
-*/
 
 
 
 ///pair
-/*int main()
+
+int main()
 {
 
     int n,a,b;
@@ -209,9 +206,10 @@ int main()
         cout<<p[i].second<<endl;;
     }
 }
-*/
+
 ///Vector pair
-/*
+
+
 int main()
 {
     int a,b;
@@ -238,10 +236,10 @@ int main()
     }
 
 }
-*/
+
 
 ///Creating Template
-/*
+
 
 template <class T>T getmax(T a,T b)
 {
@@ -274,5 +272,4 @@ int main()
     cout<<y<<endl;
     return 0;
 }
-*/
 

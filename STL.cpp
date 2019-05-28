@@ -4,6 +4,22 @@ using namespace std;
 ///Integer to binary representaion
 string s = std::bitset<64>(n).to_string();
 
+
+///string to int
+int x ;
+str = "123" ;
+stringstream ss1 ;
+
+ss1 << str ;
+ss1 >> x ;
+
+///int to string
+string s ;
+stringstream ss2 ;
+x = 123 ;
+ss2 << x ;
+s = ss2.str() ;
+
 ///Vector
 
 int main()

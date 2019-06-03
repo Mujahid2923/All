@@ -4,6 +4,31 @@ using namespace std;
 ///Integer to binary representaion
 string s = std::bitset<64>(n).to_string();
 
+///String seperate
+
+char str[] = "parrot,owl,sparrow,pigeon,crow";
+char delim[] = ",";
+cout << "The tokens are:" << endl;
+char *token = strtok(str,delim);
+while (token)
+{
+    cout << token << endl;
+    token = strtok(NULL,delim);
+}
+
+///Stop continious taking string
+while( gets( s ) && strlen( s ) )
+{
+    char *token ;
+    token = strtok( s , " " ) ;
+    src = token ;
+    token = strtok( NULL , " " ) ;
+    des = token ;
+
+    cout << src << " " << des << endl ;
+    vec.clear() ;
+}
+
 
 ///string to int
 int x ;

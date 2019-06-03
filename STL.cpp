@@ -5,7 +5,7 @@ using namespace std;
 string s = std::bitset<64>(n).to_string();
 
 ///String seperate
-
+///Link :https://www.programiz.com/cpp-programming/library-function/cstring/strtok
 char str[] = "parrot,owl,sparrow,pigeon,crow";
 char delim[] = ",";
 cout << "The tokens are:" << endl;

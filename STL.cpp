@@ -4,6 +4,20 @@ using namespace std;
 ///Integer to binary representaion
 string s = std::bitset<64>(n).to_string();
 
+//binary to decimal
+
+ll check()
+{
+    ll sum = 0 ;
+    for( int i = 0 ; i < v.size() ; i ++ )
+    {
+        //cout << v[ i ] << " " ;
+        sum += v[ i ] * pow( 2, i ) ;
+    }
+    //cout<< sum << endl ;
+    return sum ;
+}
+
 ///String seperate
 ///Link :https://www.programiz.com/cpp-programming/library-function/cstring/strtok
 char str[] = "parrot,owl,sparrow,pigeon,crow";

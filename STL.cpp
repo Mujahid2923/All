@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+///sum related 
+link - http://www.allmathtricks.com/sum-n-consecutive-numbers/
+
 ///Integer to binary representaion
 string s = std::bitset<64>(n).to_string();
 

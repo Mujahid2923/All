@@ -1,4 +1,150 @@
 
+----------------------------html-------------------------
+	<!DOCTYPE html>
+<html>
+    <body>
+        <table border="1" align="center" cellpadding="10px">
+            <caption>Complex Table</caption>
+            <thead>
+                <tr>
+                    <th rowspan="3">Day</th>
+                    <th colspan="3">Seminar</th>
+                </tr>
+                <tr>
+                    <th colspan="2">Schedule</th>
+                    <th rowspan="2">Topic</th>
+                </tr>
+                <tr>
+                    <th>Begin</th>
+                    <th>End</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td rowspan="2">Monday</td>
+                    <td rowspan="2">8.00 a.m</td>
+                    <td rowspan="2">5.00 p.m</td>
+                    <td>Introduction to XML</td>
+                </tr>
+
+                <tr>
+                    <td> Validity : DTD and Relax NG</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="4">Twesday</td>
+                    <td>8.00 a.m</td>
+                    <td>11.00 p.m</td>
+                    <td rowspan="2">XPath</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">11.00 a.m</td>
+                    <td rowspan="2">2.00 p.m</td>
+                    
+
+                </tr>
+                <tr>
+                    <td rowspan="2">XSL transform</td>
+                </tr>
+                <tr>
+                    <td>2.00 a.m</td>
+                    <td>5.00 p.m</td>
+                   
+
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>8.00 a.m</td>
+                    <td>12.00 p.m</td>
+                    <td>XSL Formatting Objects</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+    </body>
+</html>
+
+
+-------------------------------php---------------------------------
+			    <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>Login System</h1>
+
+	<form action="action.php"  method="post" >
+
+		Name :
+		<input type="text" name="name" value="Enter your name" >
+
+		<br>
+		<br>
+
+		Email :
+		<input type="text" name="email" value="Enter your emial" >
+
+		<br>
+		<br>
+
+		Phone :
+		<input type="text" name="phone" value="Enter your phone" >
+
+		<br>
+		<br>
+
+		Password :
+		<input type="text" name="password" value="Enter your password" >
+
+		<br>
+		<br>
+
+		<input type="submit" name="submit" value="Submit" >
+		
+	</form>
+
+</body>
+</html>
+
+
+<?php 
+
+$host = "localhost" ;
+$username = "root" ;
+$password = "" ;
+$dbname = "test" ;
+$tblname = "user" ;
+
+$con = mysqli_connect( "$host" , "$username" , "$password" ) or die( "can't connect" ) ;
+
+mysqli_select_db( $con , "$dbname" ) or die( "can't connect" ) ;
+echo "Server Connected";
+
+$a = $_POST[ 'name' ] ;
+$b = $_POST[ 'email' ] ;
+$c = $_POST[ 'phone' ] ;
+$d = $_POST[ 'password' ] ;
+
+echo "<br>" ;
+echo "$a";
+echo "<br>";
+echo "$b";
+echo "<br>";
+echo "$c";
+echo "<br>";
+echo "$d";
+
+$sql = "INSERT INTO $tblname ( name , email , phone , password ) VALUES ( '$a' , '$b' , '$c' , '$d' ) " ;
+mysqli_query( $con , $sql ) ;
+echo "<br>";
+echo "Inert Done";
+
+?>
 				
 JavaScript basic
 1 .

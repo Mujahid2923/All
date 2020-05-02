@@ -1,9 +1,22 @@
-                                           ///Single value in order set
-///...................................*****.................................................///
-///                  Mujahidul Islam ( mujahidulislam2923@gmail.com )                       ///
-///                  Department of Ict                                                      ///
-///                  Comilla University , Bangladesh.                                       ///
-///...................................*****.................................................///
+  
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
+template<typename T> using orderset = tree<T,null_type,less<T>,rb_tree_tag,tree_order_statistics_node_update>;
+
+
+
+-----------------Order set-----------------------
+*os.find_by_order(index) os.order_of_key(value)
+
+---------------For too( 3 ) many loop-----------------
+#pragma GCC target ("avx2")
+#pragma GCC optimization ("O3")
+#pragma GCC optimization ("unroll-loops")
+
+
+
+///Single value in order set
 
 #include<bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>

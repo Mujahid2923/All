@@ -10,6 +10,7 @@ template<typename T> using orderset = tree<T,null_type,less<T>,rb_tree_tag,tree_
 *os.find_by_order(index) os.order_of_key(value)
 
 ---------------For too( 3 ) many loop-----------------
+  
 #pragma GCC target ("avx2")
 #pragma GCC optimization ("O3")
 #pragma GCC optimization ("unroll-loops")
@@ -24,10 +25,19 @@ while( ss >> word )
 {
    cout << word << endl ;
 }
--------------------------------*******************************
+-------------------------------********************-------------------------------------
+
+int Set( int n, int pos ) { return n = n | ( 1 << pos ) ; } 
+int reset( int n, int pos ) { return n = n & ~( 1 << pos ) ; } 
+bool check( int n, int pos ) { return (bool) ( n & ( 1 << pos ) ) ; }
+
+-----------------------------------*****************------------------------------------
  
-#include<bits/stdc++.h>
-using namespace std;
+///Integer <-> binary
+string s = std::bitset<64>(n).to_string();
+ll val =  bitset< 64 >( s ).to_ullong() ;
+
+
 
 ///sum related 
 link - http://www.allmathtricks.com/sum-n-consecutive-numbers/
@@ -36,22 +46,7 @@ link - http://www.allmathtricks.com/sum-n-consecutive-numbers/
  char arr[ str.size() + 1 ] ;
  strcpy( arr, str.c_str() ) ;
 
-///Integer to binary representaion
-string s = std::bitset<64>(n).to_string();
 
-//binary to decimal
-
-ll check()
-{
-    ll sum = 0 ;
-    for( int i = 0 ; i < v.size() ; i ++ )
-    {
-        //cout << v[ i ] << " " ;
-        sum += v[ i ] * pow( 2, i ) ;
-    }
-    //cout<< sum << endl ;
-    return sum ;
-}
 
 ///String seperate
 ///Link :https://www.programiz.com/cpp-programming/library-function/cstring/strtok

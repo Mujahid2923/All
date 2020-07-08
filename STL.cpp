@@ -1,4 +1,12 @@
-  
+  --------------------------Problem solve with getline-----------------------
+ cin >> n ;
+ cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+ for( int i = 0 ; i < n ; i ++ )
+ {
+     getline( cin, s ) ;
+ }
+--------------------------------***********------------------------------------
+
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 using namespace __gnu_pbds;
@@ -88,7 +96,7 @@ stringstream ss2 ;
 x = 123 ;
 ss2 << x ;
 s = ss2.str() ;
-
+--------------------------------------------******************---------------------------------------------------
 ///Vector
 
 int main()

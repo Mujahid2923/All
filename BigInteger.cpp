@@ -1,8 +1,4 @@
-///...................................*****.................................................///
-///                  Mujahidul Islam ( mujahidulislam2923@gmail.com )                       ///
-///                  Department of Ict                                                      ///
-///                  Comilla University , Bangladesh.                                       ///
-///...................................*****.................................................///
+///https://codeforces.com/contest/630/problem/L
 
 #include<bits/stdc++.h>
 using namespace std;

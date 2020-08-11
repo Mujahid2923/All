@@ -1,12 +1,3 @@
-/// cout << fixed << setprecision( 9 ) << n << endl ;
-///sum accumulate( v.begin(), v.begin() + k, 0LL )///bool operator < ( const Node& p ) const{ return cost < p.cost ; }
-///priority_queue<int,vector<int>,greater<int> >pq;///std::set<ll, std::greater<ll> > Set;///string str = "abcdefghijklmnopqrstuvwxyz";///string s2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" ;
-///string s = bitset<64>( n ).to_string() ; ll val =  bitset< 64 >( s ).to_ullong() ;
-///--------------Graph Moves--------------------------------------
-///const int fx[] = {+1,-1,+0,+0}; ///const int fy[] = {+0,+0,+1,-1};
-///const int fx[] = {+0,+0,+1,-1,-1,+1,-1,+1}; ///King's move ///const int fy[] = {-1,+1,+0,+0,+1,+1,-1,-1}; ///king's Move
-///const int fx[] = {-2,-2,-1,-1,+1,+1,+2,+2}; ///knight's move ///const int fy[] = {-1,+1,-2,+2,-2,+2,-1,+1}; ///knight's move
-///---------------------------------------------------------------  
 
 
 --------------------------Problem solve with getline-----------------------
@@ -56,7 +47,32 @@ bool check( int n, int pos ) { return (bool) ( n & ( 1 << pos ) ) ; }
 string s = std::bitset<64>(n).to_string();
 ll val =  bitset< 64 >( s ).to_ullong() ;
 
+--------------------------------***************--------------------------------
+ 
+ lcm of three numbers
+  ll x = lcm( a, b ) ;
+  ll y = lcm( x, c ) / gcd( x, c ) ;
 
+------------------------------******************--------------------------------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 ///sum related 
 link - http://www.allmathtricks.com/sum-n-consecutive-numbers/

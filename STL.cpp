@@ -360,6 +360,17 @@ int main()
 }
 
 
+*****------------- power template ----------------*****
+
+template < class T >T pow( T a,T b )
+{
+    int c = 1 ;
+    for( int i = 1 ; i <= b ; i ++ ) c *= a ;
+    return c ;
+}
+
+-------------**************-------------------------
+
 ///Creating Template
 
 

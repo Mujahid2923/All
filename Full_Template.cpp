@@ -68,6 +68,19 @@ using namespace std;
 ///const int fx[] = {-2,-2,-1,-1,+1,+1,+2,+2}; ///knight's move ///const int fy[] = {-1,+1,-2,+2,-2,+2,-1,+1}; ///knight's move
 ///---------------------------------------------------------------
 
+int Set( int n, int pos )
+{
+    return n = n | ( 1 << pos ) ;
+}
+int reset( int n, int pos )
+{
+    return n = n & ~( 1 << pos ) ;
+}
+bool check( int n, int pos )
+{
+    return (bool) ( n & ( 1 << pos ) ) ;
+}
+
 
 ///--------------------**********----------------------------------
 
@@ -94,7 +107,7 @@ void Reset()
 
 void Input()
 {
-    cin >> x >> y >> m ;
+    
 }
 
 void Calculation()

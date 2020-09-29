@@ -1,116 +1,96 @@
-#include<bits/stdc++.h>
-using namespace std;
+***********-----------------------------Search the element For circularly sorted array-------------------------------*******************
 
-int binarySearchlower(int arr[],int n,int a)
+vector < ll > v ;
+ll n, x ;
+
+void Input()
 {
-
-    int low = 0;
-    int high = n - 1;
-    int index = -1;
-    int mid;
-    while (low < high)
+    cin >> n ;
+    for( int i = 0 ; i < n ; i ++ )
     {
-        mid = (low + high) / 2;
-        if (arr[mid] == a)
+        cin >> x ;
+        v.pb( x ) ;
+    }
+}
+
+int Fun( int low, int high, int val )
+{
+    while( low <= high )
+    {
+        int mid = ( low + high ) >> 1 ;
+        if( v[ mid ] == val ) return mid ;
+
+        if( v[ mid ] <= v[ high ] )
         {
-            index = mid;
-            high = mid - 1;
+            if( val >= v[ mid ] && val <= v[ high ] ) low = mid + 1 ;
+            else high = mid - 1 ;
         }
-        else if (arr[mid] < a)
+        else if( v[ low ] <= v[ mid ] )
         {
-            low = mid + 1;
-
-        }
-        else
-        {
-            high = mid - 1;
+            if( val >= v[ low ] && val <= v[ mid ] ) high = mid - 1 ;
+            else low = mid + 1 ;
         }
     }
+}
 
-    mid = (low + high) / 2;
-    if (arr[mid] == a)
+void Calculation()
+{
+    for( int i = 0 ; i < n ; i ++ )
     {
-        index = mid;
+        cout << Fun( 0, n - 1, v[ i ] ) + 1 << endl ;
     }
-    else if (arr[mid] < a)
-    {
-        index = mid + 1;
-
-    }
-    else if (arr[mid] > a)
-    {
-        index = mid;
-    }
-    return index;
 }
 
 
-int binarySearchupper(int arr[],int n,int b)
+/*
+8
+11 12 15 18 2 5 6 8
+*/
+
+
+************************-------------------------------Lower and Upper ---------------------------------****************************
+vector < ll > v ;
+ll n, x ;
+
+void Input()
 {
-
-    int low = 0;
-    int high = n - 1;
-    int index = -1;
-    int mid;
-    while (low < high)
+    cin >> n ;
+    for( int i = 0 ; i < n ; i ++ )
     {
-        mid = (low + high) / 2;
-        if (arr[mid] == b)
-        {
-            index = mid + 1;
-            low = mid + 1;
-        }
-        else if (arr[mid] < b)
-        {
-            low = mid + 1;
-
-        }
-        else
-        {
-            high = mid - 1;
-        }
+        cin >> x ;
+        v.pb( x ) ;
     }
-    mid = (low + high) / 2;
-    if (arr[mid] == b)
-    {
-        index = mid + 1;
-    }
-    else if (arr[mid] < b)
-    {
-        index = mid + 1;
-
-    }
-    else if (arr[mid] > b)
-    {
-        index = mid;
-    }
-    return index;
 }
 
-
-int main()
+int Fun( int val , int ck )
 {
-    int t, n, q, a, b;
-    int cnt;
-    scanf("%d",&t);
-    for (int i = 1; i <= t; i++)
+    int low = 0 , high = n - 1, result = -1 ;
+    while( low <= high )
     {
-        scanf("%d %d",&n,&q);
-        int arr[n];
-        for (int j = 0; j < n; j++)
+        int mid = ( low + high ) >> 1 ;
+        if( v[ mid ] == val )
         {
-            scanf("%d",&arr[j]);
+            result = mid ;
+            if( !ck ) high = mid - 1 ;
+            else low = mid + 1 ;
         }
-
-        printf("Case %d:\n",i);
-        for (int j = 0; j < q; j++)
-        {
-            scanf("%d %d",&a,&b);
-            int x = binarySearchlower(arr,n, a);
-            int y = binarySearchupper(arr,n, b);
-            printf("%d\n",y-x);
-        }
-
+        else if( v[ mid ] > val ) high = mid - 1 ;
+        else if( v[ mid ] < val ) low = mid + 1 ;
     }
+    return result ;
 }
+
+void Calculation()
+{
+    cout << Fun( 2, 0 ) + 1 << " " << Fun( 2, 1 ) + 1 << endl ;
+    cout << Fun( 6, 0 ) + 1 << " " << Fun( 6, 1 ) + 1 << endl ;
+
+}
+
+/*
+
+10
+1 2 2 2 5 6 6 6 6 8
+
+*/
 

@@ -94,3 +94,51 @@ void Calculation()
 
 */
 
+**********************-----------------------How many time a sorted array rotated ---------------------------************************
+void Input()
+{
+    cin >> n ;
+    for( int i = 0 ; i < n ; i ++ )
+    {
+        cin >> x ;
+        v.pb( x ) ;
+    }
+}
+
+int Fun( int low, int high )
+{
+
+    while( low <= high )
+    {
+        if( v[ low ] <= v[ high ] ) return low ; // already sorted
+        int mid = ( low + high ) >> 1 ;
+        int pre = ( mid - 1 + n ) % n, next = ( mid + 1 ) % n ;
+        if( v[ pre ] >= v[ mid ] && v[ next ] >= v[ mid ] )
+        {
+            return mid ; // 21 2 5
+        }
+        else if( v[ mid ] <= v[ high ] )
+        {
+            high = mid - 1 ;
+        }
+        else if( v[ mid ] >= v[ low ] )
+        {
+            low = mid + 1 ;
+        }
+    }
+}
+
+void Calculation()
+{
+    cout << Fun( 0, n - 1 ) + 1 << endl ;
+}
+
+
+/*
+
+10
+11 12 15 18 20 21 2 5 6 8
+
+*/
+
+1 number location theke 2 ekkhon 7 number position e . Total ( 7 - 1 ) = 6 bar rotated 

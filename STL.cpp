@@ -1,4 +1,5 @@
 
+__builtin_popcount( int n ) to get number of 1 in the binary representation of the number
 
 --------------------------Problem solve with getline-----------------------
  cin >> n ;

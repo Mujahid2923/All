@@ -1,7 +1,14 @@
 
 __builtin_popcount( int n ) to get number of 1 in the binary representation of the number
 
---------------------------Problem solve with getline-----------------------
+-----------------------***********************------------------------
+To check a number weather it is a power of something or not
+double ans = ( log10( n ) / log10( 3 ) ) ;
+double val = ceil( ans ) ;
+if( ans == val ) return true ;
+
+--------------------------****************************-----------------------
+ Problem solve with getline
  cin >> n ;
  cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
  for( int i = 0 ; i < n ; i ++ )

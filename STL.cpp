@@ -53,7 +53,7 @@ bool check( int n, int pos ) { return (bool) ( n & ( 1 << pos ) ) ; }
  
 ///Integer <-> binary
 string s = std::bitset<64>(n).to_string();
-ll val =  bitset< 64 >( s ).to_ullong() ;
+ll val =  bitset< 64 >( s ).to_ullong() ; or int val = stoi(s, 0, 2); // sum start from 0 with base of two
 
 --------------------------------***************--------------------------------
  

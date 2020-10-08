@@ -1,6 +1,10 @@
 
 __builtin_popcount( int n ) to get number of 1 in the binary representation of the number
 
+------------------------**********************-------------------------
+Inter vector element at a particular place and other element with go to one next step
+v.insert( v.begin() + idx, val ) ;
+
 -----------------------***********************------------------------
 To check a number weather it is a power of something or not
 double ans = ( log10( n ) / log10( 3 ) ) ;

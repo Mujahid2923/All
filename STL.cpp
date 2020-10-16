@@ -1,3 +1,12 @@
+Initialize:
+string s( 5, 'a' ) -> now the string s = "aaaaa"
+s.substr( 0 ) -> 0 to last
+s.substr( 0, 2 ) -> 0 theke 2 length
+set< char > st = { 'a','e','i','o','u' } ;
+vector< int > v ( n, 0 ) ; -> n size with value 0
+ 
+ -------------------------************----------------------------
+
 
 __builtin_popcount( int n ) to get number of 1 in the binary representation of the number
 

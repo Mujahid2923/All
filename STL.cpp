@@ -83,17 +83,18 @@ int val = min( x, 26 - x ) ;
 
 ------------------------------******************--------------------------------
  
+ keeping common part in both vector..................
+    vector<int> intersect(vector<int>& a, vector<int>& b)
+    {
+        sort( a.begin(), a.end() ) ;
+        sort( b.begin(), b.end() ) ;
+        a.erase(set_intersection(a.begin(), a.end(), b.begin(), b.end(), a.begin()), a.end());
+        return a ;
+    }
+a => [4,9,5], b => [9,4,9,8,4] ;
+then a => [4,9]
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+---------------------------------********************-------------------------------- 
  
  
 

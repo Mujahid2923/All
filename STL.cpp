@@ -67,6 +67,11 @@ bool check( int n, int pos ) { return (bool) ( n & ( 1 << pos ) ) ; }
 ///Integer <-> binary
 string s = std::bitset<64>(n).to_string();
 ll val =  bitset< 64 >( s ).to_ullong() ; or int val = stoi(s, 0, 2); or stol -> for long long // sum start from 0 with base of two
+ 
+ ///string to charArray
+ char arr[ s.size() + 1 ] ;
+ strcpy( arr, s.c_str() ) ;
+then we will have to use => int val = atoi( arr ) ;
 
 --------------------------------***************--------------------------------
  
@@ -100,10 +105,6 @@ then a => [4,9]
 
 ///sum related 
 link - http://www.allmathtricks.com/sum-n-consecutive-numbers/
-
-///string to charArray
- char arr[ str.size() + 1 ] ;
- strcpy( arr, str.c_str() ) ;
 
 
 

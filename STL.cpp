@@ -4,6 +4,7 @@ s.substr( 0 ) -> 0 to last
 s.substr( 0, 2 ) -> 0 theke 2 length
 set< char > st = { 'a','e','i','o','u' } ;
 vector< int > v ( n, 0 ) ; -> n size with value 0
+vector< vector<int> > dp( row, vector<int>(col, 1) ); => 2d vector with size row, col and initialize with 1 , like dp[ row ][ col ] ;
  
  -------------------------************----------------------------
 

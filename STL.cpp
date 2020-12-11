@@ -1,3 +1,4 @@
+
 Initialize:
 string s( 5, 'a' ) -> now the string s = "aaaaa"
 s.substr( 0 ) -> 0 to last
@@ -24,6 +25,8 @@ double ans = ( log10( n ) / log10( 3 ) ) ;
 double val = ceil( ans ) ;
 if( ans == val ) return true ;
 
+
+#getline solution
 --------------------------****************************-----------------------
  Problem solve with getline
  cin >> n ;
@@ -51,9 +54,10 @@ template<typename T> using orderset = tree<T,null_type,less<T>,rb_tree_tag,tree_
 #pragma GCC optimization ("unroll-loops")
  
  
+ #Stringstream
  ----------------------------------******************-----------------------------
- string s ;
- word from getline( cin , s ) ;
+string s ;
+word from getline( cin , s ) ;
 stringstream ss( s ) ;
 string word ;
 while( ss >> word )
@@ -105,6 +109,26 @@ then a => [4,9]
  
 ---------------------------------********************-------------------------------- 
  
+ 
+ ---------------------------********************File inout output****************----------------------
+#include<fstream>
+void Calculation()
+{
+    ifstream Cin ; // object created which don't need to use in cin, cout
+    ofstream Cout ;
+    Cout.open( "Mujahid.txt" ) ; // obverwrite everytime
+ // Cout.open( "Mujahid.txt", ios :: app ) ; // If we want to append string instead of overwrite the previous data
+    Cout << "Ajjaira osob " << endl ;
+    Cout.close() ;
+
+    Cin.open( "Mujahid.txt" ) ;
+    //getline( Cin, str ) ;
+    Cin >> str ;
+    cout << str << endl ;
+    Cin.close() ;
+}
+
+----------------------------------------------------------
  
 
 ///sum related 
